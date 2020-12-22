@@ -1,0 +1,112 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#009688"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/main_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20pt"
+            android:layout_marginBottom="@dimen/margin_top_bottom"
+            android:text="Stock Information"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/title_text_size" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+    <Button
+        android:id="@+id/insert_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="insertStocksClick"
+        android:text="Insert Stocks" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/sub_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20pt"
+            android:layout_marginBottom="@dimen/margin_top_bottom"
+            android:text="Select Stock symbol:"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/sub_text_size" />
+
+        <RadioGroup
+            android:id="@+id/stocks_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/AAPL_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="AAPL"
+                android:textColor="@color/radio_color"
+                android:textSize="@dimen/radio_text_size" />
+            />
+
+            <RadioButton
+                android:id="@+id/MSFT_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="MSFT"
+                android:textColor="@color/radio_color"
+                android:textSize="@dimen/radio_text_size" />
+
+            <RadioButton
+                android:id="@+id/TSLA_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TSLA"
+                android:textColor="@color/radio_color"
+                android:textSize="@dimen/radio_text_size" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/Display_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="display_click"
+            android:text="Display Stock Info" />
+
+        <TextView
+            android:id="@+id/txtStockName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_bottom"
+            android:paddingStart="@dimen/padding_size"
+            android:textColor="@color/radio_color"
+            android:textSize="@dimen/radio_text_size" />
+
+        <TextView
+            android:id="@+id/txtStockQuote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/padding_size"
+            android:textColor="@color/radio_color"
+            android:textSize="@dimen/radio_text_size" />
+
+    </LinearLayout>
+
+</LinearLayout>
